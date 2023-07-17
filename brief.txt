@@ -1,0 +1,35 @@
+Sistem pengelolaan rak buku novel
+
+Fitur Aplikasi:
+1. Registrasi (Nama, Username, Password, email)
+2. Login (Username, Password)
+3. CRUD Buku
+4. genre, judul(buku), sinopsis, tahun terbit, jumlah buku, tersedia/tidak, foto cover.
+5. Terpisah antar genre
+
+Database: Done
+1. Users
+1.1 id_user int AI  PK
+1.2 Nama varchar NN
+1.3 Username varchar NN
+1.4 Password varchar NN
+1.5 Email varchar NN
+
+2. Genre
+2.1 Id_genre INT AI PK NN
+2.2 jenis genre text NN
+
+3. Buku
+3.1 id_buku int ai pk nn
+3.2 Nama_buku varchar nn
+3.3 Sinopsis text nn
+3.4 Tahun_terbit year nn
+3.5 Jumlah_buku smallint nn
+3.7 Foto_cover varchar nn
+
+Stack:
+1. HTML/CSS
+2. Bootstrap 5.3
+3. PHP
+4. MySQL
+5. jQuery
