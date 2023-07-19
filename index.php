@@ -195,11 +195,6 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="template/vendor/jquery/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.peringatan').addClass('h3 mb-0 text-gray-800');
-        });
-    </script>
     <script src="template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="template/vendor/jquery-easing/jquery.easing.min.js"></script>
