@@ -10,9 +10,10 @@
 <?php 
     $query = mysqli_query($con, "SELECT * FROM buku LEFT JOIN genre ON buku.id_genre = genre.id_genre ORDER BY buku.id_buku DESC");
     while($data = mysqli_fetch_array($query)){
+        if($data){
 ?>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?=$data['foto']?>" alt="Card image cap">
+            <img class="card-img-top" src="<?=$data['foto_cover']?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"><?=$data['nama_buku']?></h5>
                 <p class="card-text"><?=$data['sinopsis']?></p>
@@ -21,7 +22,9 @@
                 <a href="?hal=buku_edit&?id_buku=<?=$data['id_buku']?>" class="btn btn-warning">Edit</a>
             </div>
         </div>
-
+        
 <?php
+    break;
     };
+}
 ?>

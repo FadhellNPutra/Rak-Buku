@@ -13,12 +13,12 @@
     </div>
     <div class="form-group">
         <label for="genre">Genre</label>
-        <select class="custom-select">
+        <select class="custom-select" name = "genre">
             <option selected>-- Pilih Genre --</option>
             <?php 
                 $query = mysqli_query($con, "SELECT * FROM genre");
                 while($j = mysqli_fetch_array($query)){
-                echo "<option value='$j[jenis_genre]'>$j[jenis_genre]</option>";
+                echo "<option value='$j[id_genre]'>$j[jenis_genre]</option>";
                 };
             ?>
         </select>
@@ -30,7 +30,7 @@
     </div>
     <div class="form-group">
         <label for="terbitan">Terbitan</label>
-        <input type="date" class="form-control" id="terbitan" placeholder="Tahun Terbit" name="tahun_terbit">
+        <input type="number" class="form-control" id="terbitan" placeholder="Tahun Terbit" name="tahun_terbit">
     </div>
     <div class="form-group">
         <label for="jumlah">Jumlah Buku</label>
