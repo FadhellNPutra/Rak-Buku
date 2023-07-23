@@ -23,7 +23,7 @@
             unlink("images/$data[foto_cover]");
 
             move_uploaded_file($lokasi, "images/".$foto);
-            $query = mysqli_query($con, "INSERT INTO buku SET nama_buku = '$_POST[nama_buku]',
+            $query = mysqli_query($con, "UPDATE buku SET nama_buku = '$_POST[nama_buku]',
             sinopsis = '$_POST[sinopsis]', tahun_terbit = '$_POST[tahun_terbit]', jumlah_buku = '$_POST[jumlah_buku]', id_genre = '$_POST[genre]', foto_cover = '$cover' WHERE id_buku = '$_GET[id_buku]'");
         }
     }

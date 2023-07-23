@@ -1,7 +1,7 @@
 <?php 
     if(!defined('INDEX')) die("");
 
-	$query = mysqli_query($con, "SELECT * FROM buku WHERE id_buku = '$_GET[id_buku]'");
+	$query = mysqli_query($con, "SELECT * FROM buku WHERE id_buku = '$_GET[id]'");
 	$data = mysqli_fetch_array($query);
 ?>
 

@@ -1,7 +1,7 @@
 <?php 
     if(!defined('INDEX')) die("");
 
-    $query = mysqli_query($con, "SELECT * FROM buku WHERE id_buku = '$_GET[id_buku]'");
+    $query = mysqli_query($con, "SELECT * FROM buku WHERE id_buku = '$_GET[id]'");
     $data = mysqli_fetch_array($query);
 ?>
 <hr class="sidebar-divider my-0">
@@ -17,11 +17,11 @@
     <div class="form-group">
         <label for="genre">Genre</label>
         <select class="custom-select">
-            <option selected>-- Pilih Genre --</option>
+            <option>-- Pilih Genre --</option>
             <?php 
                 $queryGenre = mysqli_query($con, "SELECT * FROM genre");
                 while($j = mysqli_fetch_array($queryGenre)){
-                echo "<option value='$j[jenis_genre]'";
+                echo "<option value='$j[id_genre]'";
                     if($j['jenis_genre'] == $data['jenis_genre']){
                         echo "selected";
                     };

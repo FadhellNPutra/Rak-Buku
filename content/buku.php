@@ -7,24 +7,27 @@
 </div>
 <a href="?hal=buku_tambah" class="btn btn-primary">Tambah Buku</a>
 
+
+<div class="container mt-4">
+    <div class="row">
 <?php 
     $query = mysqli_query($con, "SELECT * FROM buku LEFT JOIN genre ON buku.id_genre = genre.id_genre ORDER BY buku.id_buku DESC");
     while($data = mysqli_fetch_array($query)){
-        if($data){
 ?>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<?=$data['foto_cover']?>" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title"><?=$data['nama_buku']?></h5>
-                <p class="card-text"><?=$data['sinopsis']?></p>
-                <a href="?hal=buku_detail&?id_buku=<?=$data['id_buku']?>" class="btn btn-info">Detail</a>
-                <a href="?hal=buku_hapus&?id_buku=<?=$data['id_buku']?>" class="btn btn-danger">Hapus</a>
-                <a href="?hal=buku_edit&?id_buku=<?=$data['id_buku']?>" class="btn btn-warning">Edit</a>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="images/<?=$data['foto_cover']?>" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><?=$data['nama_buku']?></h5>
+                    <p class="card-text"><?=$data['sinopsis']?></p>
+                    <a href="?hal=buku_detail&id=<?=$data['id_buku']?>" class="btn btn-info">Detail</a>
+                    <a href="?hal=buku_hapus&id=<?=$data['id_buku']?>" class="btn btn-danger">Hapus</a>
+                    <a href="?hal=buku_edit&id=<?=$data['id_buku']?>" class="btn btn-warning">Edit</a>
+                </div>
             </div>
         </div>
-        
 <?php
-    break;
     };
-}
 ?>
+    </div>
+</div>
